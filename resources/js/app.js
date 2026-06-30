@@ -1,7 +1,13 @@
-import './bootstrap';
+// Bootstrap CSS and jQuery setup
+import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
+window.$ = window.jQuery = $;
 
-import Alpine from 'alpinejs';
+import 'bootstrap';
 
-window.Alpine = Alpine;
-
-Alpine.start();
+// CSRF token for all AJAX requests
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});

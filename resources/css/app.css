@@ -1,3 +1,192 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Custom Theme Colors */
+:root {
+    --primary-red: #cf1526;
+    --primary-blue: #0067ae;
+    --bg-light: #f7f7f7;
+    --dark: #212529;
+}
+
+/* Override Bootstrap defaults with theme colors */
+.text-primary-red { color: var(--primary-red) !important; }
+.bg-primary-red { background-color: var(--primary-red) !important; }
+.border-primary-red { border-color: var(--primary-red) !important; }
+
+.text-primary-blue { color: var(--primary-blue) !important; }
+.bg-primary-blue { background-color: var(--primary-blue) !important; }
+.border-primary-blue { border-color: var(--primary-blue) !important; }
+
+.bg-light-custom { background-color: var(--bg-light) !important; }
+
+/* Sidebar */
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #212529 0%, #343a40 100%);
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 4px 12px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--primary-red);
+}
+
+.sidebar .nav-link i {
+    width: 24px;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-red) !important;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn-primary-red {
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+    color: #fff;
+}
+
+.btn-primary-red:hover {
+    background-color: #a0101e;
+    border-color: #a0101e;
+    color: #fff;
+}
+
+.btn-primary-blue {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: #fff;
+}
+
+.btn-primary-blue:hover {
+    background-color: #005085;
+    border-color: #005085;
+    color: #fff;
+}
+
+/* Tables */
+.table thead th {
+    background-color: var(--bg-light);
+    border-bottom: 2px solid var(--primary-red);
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+    color: #fff;
+    padding: 80px 0;
+}
+
+/* Promo Card */
+.promo-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    overflow: hidden;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-red);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Product Card */
+.product-card {
+    transition: transform 0.3s;
+    border: none;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Banner */
+.banner-carousel .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--bg-light);
+}
+
+/* Contact Form */
+.contact-section {
+    background-color: #fff;
+}
+
+/* Admin Page */
+.content-wrapper {
+    padding: 20px;
+}
+
+.page-header {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+/* Badge */
+.badge-primary-red {
+    background-color: var(--primary-red);
+}
+
+/* Link */
+.text-primary-red:hover {
+    color: #a0101e;
+}
+
+.text-primary-blue:hover {
+    color: #005085;
+}
